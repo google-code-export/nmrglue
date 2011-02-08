@@ -84,7 +84,8 @@
 <dl class="function">
 <dt id="nmrglue.process.proc_base.fsh">
 <tt class="descclassname">nmrglue.process.proc_base.</tt><tt class="descname">fsh</tt><big>(</big><em>data</em>, <em>pts</em><big>)</big><a class="headerlink" href="#nmrglue.process.proc_base.fsh" title="Permalink to this definition">¶</a></dt>
-<dd><p>Frequency Shift by Fourier Transform</p>
+<dd><p>Frequency Shift by Fourier Transform (ifft-&gt;phase-&gt;fft)</p>
+<p>Positive pts shift spectrum to the right, negative to the left.</p>
 <p>Parameters:</p>
 <ul class="simple">
 <li>data  Array of spectral data.</li>
@@ -122,7 +123,7 @@
     </div>
     <div class="footer">
       &copy; Copyright 2010, Jonathan J. Helmus.
-      Last updated on Oct 29, 2010.
+      Last updated on Dec 13, 2010.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.4.
     </div>
   </body>

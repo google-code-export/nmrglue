@@ -111,7 +111,7 @@ the file.</p>
 <p>These are the functions the majority of users will use from the bruker module.</p>
 <dl class="function">
 <dt id="nmrglue.fileio.bruker.read">
-<tt class="descclassname">nmrglue.fileio.bruker.</tt><tt class="descname">read</tt><big>(</big><em>dir='.'</em>, <em>bin_file=None</em>, <em>acqus_files=None</em>, <em>pprog_file=None</em>, <em>shape=None</em>, <em>cplex=None</em>, <em>big=None</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.bruker.read" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">nmrglue.fileio.bruker.</tt><tt class="descname">read</tt><big>(</big><em>dir='.'</em>, <em>bin_file=None</em>, <em>acqus_files=None</em>, <em>pprog_file=None</em>, <em>shape=None</em>, <em>cplex=None</em>, <em>big=None</em>, <em>read_prog=True</em>, <em>read_acqus=True</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.bruker.read" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read Bruker files in directory</p>
 <p>Parameters:</p>
 <ul>
@@ -133,6 +133,10 @@ the file.</p>
 </dd>
 </dl>
 </li>
+<li><p class="first">read_prog     True will read pulseprogram file, False prevents reading.</p>
+</li>
+<li><p class="first">read_acqus    True will read acqus file(s), False prevents reading.</p>
+</li>
 </ul>
 <p>Only the dir parameter must be defined, others will be determined 
 automatically if not specified.</p>
@@ -140,7 +144,7 @@ automatically if not specified.</p>
 
 <dl class="function">
 <dt id="nmrglue.fileio.bruker.read_lowmem">
-<tt class="descclassname">nmrglue.fileio.bruker.</tt><tt class="descname">read_lowmem</tt><big>(</big><em>dir='.'</em>, <em>bin_file=None</em>, <em>acqus_files=None</em>, <em>pprog_file=None</em>, <em>shape=None</em>, <em>cplex=None</em>, <em>big=None</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.bruker.read_lowmem" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">nmrglue.fileio.bruker.</tt><tt class="descname">read_lowmem</tt><big>(</big><em>dir='.'</em>, <em>bin_file=None</em>, <em>acqus_files=None</em>, <em>pprog_file=None</em>, <em>shape=None</em>, <em>cplex=None</em>, <em>big=None</em>, <em>read_prog=True</em>, <em>read_acqus=True</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.bruker.read_lowmem" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read Bruker files using minimal amounts of memory</p>
 <p>Parameters:</p>
 <ul>
@@ -162,6 +166,10 @@ automatically if not specified.</p>
 </dd>
 </dl>
 </li>
+<li><p class="first">read_pprog    True will read pulseprogram file, False prevents reading.</p>
+</li>
+<li><p class="first">read_acqus    True will read acqus file(s), False prevents reading.</p>
+</li>
 </ul>
 <p>Only the dir parameter must be defined, others will be determined 
 automatically if not specified.</p>
@@ -169,7 +177,7 @@ automatically if not specified.</p>
 
 <dl class="function">
 <dt id="nmrglue.fileio.bruker.write">
-<tt class="descclassname">nmrglue.fileio.bruker.</tt><tt class="descname">write</tt><big>(</big><em>dir</em>, <em>dic</em>, <em>data</em>, <em>bin_file=None</em>, <em>acqus_files=None</em>, <em>pprog_file=None</em>, <em>overwrite=False</em>, <em>big=True</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.bruker.write" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">nmrglue.fileio.bruker.</tt><tt class="descname">write</tt><big>(</big><em>dir</em>, <em>dic</em>, <em>data</em>, <em>bin_file=None</em>, <em>acqus_files=None</em>, <em>pprog_file=None</em>, <em>overwrite=False</em>, <em>big=True</em>, <em>write_prog=True</em>, <em>write_acqus=True</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.bruker.write" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write Bruker files</p>
 <p>Parameters:</p>
 <ul>
@@ -192,6 +200,10 @@ automatically if not specified.</p>
 <dd><p class="first last">bigendian=True, little=False</p>
 </dd>
 </dl>
+</li>
+<li><p class="first">write_prog    True will write pulseprogram file, False does not.</p>
+</li>
+<li><p class="first">write_acqus   True will write acqus file(s), False does not.</p>
 </li>
 </ul>
 <p>If any of bin_file,acqus_files or pprog_file are None the associated 
@@ -328,12 +340,15 @@ read_pprog, nothing else.  The pulse program will be nonsense.</p>
 
 <dl class="function">
 <dt id="nmrglue.fileio.bruker.remove_digital_filter">
-<tt class="descclassname">nmrglue.fileio.bruker.</tt><tt class="descname">remove_digital_filter</tt><big>(</big><em>data</em>, <em>pts</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.bruker.remove_digital_filter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Remove digital filter</p>
-<p>As described in:</p>
-<blockquote>
-DMX DIGITAL FILTERS AND NON-BRUKER OFFLINE PROCESSING III
-W. M. Westler and F.  Abildgaard</blockquote>
+<tt class="descclassname">nmrglue.fileio.bruker.</tt><tt class="descname">remove_digital_filter</tt><big>(</big><em>dic</em>, <em>data</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.bruker.remove_digital_filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the digial filter from Bruker data.</p>
+<p>Use rm_dig_filter to specify decim, dspfvs, and grpdly paraters.</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li>dic   Dictionary of Bruker parameters</li>
+<li>data  array of data.</li>
+</ul>
+<p>Returns: array with digital filter removed</p>
 </dd></dl>
 
 <dl class="function">
@@ -394,12 +409,6 @@ and (1),True is returned</p>
 <dt id="nmrglue.fileio.bruker.uncomplexify_data">
 <tt class="descclassname">nmrglue.fileio.bruker.</tt><tt class="descname">uncomplexify_data</tt><big>(</big><em>data_in</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.bruker.uncomplexify_data" title="Permalink to this definition">¶</a></dt>
 <dd>Uncomplexify data (pack real,imag) into a int32 array</dd></dl>
-
-<dl class="function">
-<dt id="nmrglue.fileio.bruker.dig_filter_pts">
-<tt class="descclassname">nmrglue.fileio.bruker.</tt><tt class="descname">dig_filter_pts</tt><big>(</big><em>dic</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.bruker.dig_filter_pts" title="Permalink to this definition">¶</a></dt>
-<dd>Determind the number of points to freq. shifting data to remove the digital
-filter</dd></dl>
 
 <dl class="function">
 <dt id="nmrglue.fileio.bruker.parse_jcamp_line">
@@ -490,7 +499,7 @@ parameter value extends over multiple lines.</p>
     </div>
     <div class="footer">
       &copy; Copyright 2010, Jonathan J. Helmus.
-      Last updated on Oct 29, 2010.
+      Last updated on Feb 08, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.4.
     </div>
   </body>

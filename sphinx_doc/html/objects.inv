@@ -12,6 +12,7 @@ nmrglue.process.proc_bl mod reference/proc_bl.html
 nmrglue.analysis.leastsqbound mod reference/leastsqbound.html
 nmrglue.process.pipe_proc mod reference/pipe_proc.html
 nmrglue.fileio.sparky mod reference/sparky.html
+nmrglue.fileio.table mod reference/table.html
 nmrglue.fileio.fileiobase mod reference/fileiobase.html
 nmrglue.util.misc mod reference/misc.html
 nmrglue.fileio.glue mod reference/glue.html
@@ -34,7 +35,7 @@ nmrglue.fileio.pipe.make_uc function reference/pipe.html
 nmrglue.fileio.varian.get_fileheader function reference/varian.html
 nmrglue.process.proc_lp.lp_1d function reference/generated/nmrglue.process.proc_lp.lp_1d.html
 nmrglue.process.proc_base.filter_percentile function reference/generated/nmrglue.process.proc_base.filter_percentile.html
-nmrglue.fileio.sparky.calc_tshape function reference/sparky.html
+nmrglue.fileio.varian.read_fid_lowmem_2D function reference/varian.html
 nmrglue.process.proc_base.bin2int function reference/generated/nmrglue.process.proc_base.bin2int.html
 nmrglue.process.proc_base.filter_amin function reference/generated/nmrglue.process.proc_base.filter_amin.html
 nmrglue.process.pipe_proc.cs function reference/generated/nmrglue.process.pipe_proc.cs.html
@@ -48,7 +49,6 @@ nmrglue.fileio.sparky.put_tile function reference/sparky.html
 nmrglue.fileio.varian.uninterleave_data function reference/varian.html
 nmrglue.process.proc_base.tri function reference/generated/nmrglue.process.proc_base.tri.html
 nmrglue.analysis.linesh.f_NDregion function reference/linesh.html
-nmrglue.fileio.bruker.get_data function reference/bruker.html
 nmrglue.fileio.bruker.write_pprog function reference/bruker.html
 nmrglue.fileio.varian.interleave_data function reference/varian.html
 nmrglue.fileio.bruker.read_binary function reference/bruker.html
@@ -60,6 +60,7 @@ nmrglue.process.proc_base.tp_hyper function reference/generated/nmrglue.process.
 nmrglue.fileio.convert.converter.to_bruker method reference/convert.html
 nmrglue.process.pipe_proc.cbf function reference/generated/nmrglue.process.pipe_proc.cbf.html
 nmrglue.process.proc_base.zd_sinebell function reference/generated/nmrglue.process.proc_base.zd_sinebell.html
+nmrglue.fileio.pipe.guess_pformat function reference/pipe.html
 nmrglue.process.proc_lp.find_coeff function reference/generated/nmrglue.process.proc_lp.find_coeff.html
 nmrglue.fileio.varian.put_nblocks function reference/varian.html
 nmrglue.process.proc_base.em function reference/generated/nmrglue.process.proc_base.em.html
@@ -67,7 +68,7 @@ nmrglue.process.pipe_proc.mc function reference/generated/nmrglue.process.pipe_p
 nmrglue.process.pipe_proc.ml function reference/generated/nmrglue.process.pipe_proc.ml.html
 nmrglue.fileio.glue.read function reference/glue.html
 nmrglue.process.proc_base.zf_double function reference/generated/nmrglue.process.proc_base.zf_double.html
-nmrglue.fileio.varian.write_fid_2D function reference/varian.html
+nmrglue.process.proc_base.ift function reference/generated/nmrglue.process.proc_base.ift.html
 nmrglue.fileio.glue.create_dic function reference/glue.html
 nmrglue.process.pipe_proc.coad function reference/generated/nmrglue.process.pipe_proc.coad.html
 nmrglue.process.proc_base.mc function reference/generated/nmrglue.process.proc_base.mc.html
@@ -86,7 +87,7 @@ nmrglue.analysis.linesh.ls_str2class function reference/linesh.html
 nmrglue.process.proc_base.rolr function reference/generated/nmrglue.process.proc_base.rolr.html
 nmrglue.process.pipe_proc.smo function reference/generated/nmrglue.process.pipe_proc.smo.html
 nmrglue.process.proc_base.qart_auto function reference/generated/nmrglue.process.proc_base.qart_auto.html
-nmrglue.fileio.varian.repack_blockheader function reference/varian.html
+nmrglue.fileio.bruker.get_data function reference/bruker.html
 nmrglue.fileio.varian.repack_hyperheader function reference/varian.html
 nmrglue.fileio.sparky.datetime2dic function reference/sparky.html
 nmrglue.process.pipe_proc.poly function reference/generated/nmrglue.process.pipe_proc.poly.html
@@ -101,7 +102,6 @@ nmrglue.process.pipe_proc.rft function reference/generated/nmrglue.process.pipe_
 nmrglue.fileio.pipe.flist_from_filemask function reference/pipe.html
 nmrglue.fileio.varian.skip_blockheader function reference/varian.html
 nmrglue.process.proc_base.set_imag function reference/generated/nmrglue.process.proc_base.set_imag.html
-nmrglue.fileio.pipe.write_slice_3D function reference/pipe.html
 nmrglue.fileio.varian.put_fileheader function reference/varian.html
 nmrglue.process.pipe_proc.rs function reference/generated/nmrglue.process.pipe_proc.rs.html
 nmrglue.process.proc_base.filter_min function reference/generated/nmrglue.process.proc_base.filter_min.html
@@ -144,6 +144,8 @@ nmrglue.fileio.pipe.dic2datetime function reference/pipe.html
 nmrglue.fileio.glue.wrap_data function reference/glue.html
 nmrglue.fileio.varian.get_nblocks function reference/varian.html
 nmrglue.process.proc_bl.cbf_explicit function reference/generated/nmrglue.process.proc_bl.cbf_explicit.html
+nmrglue.fileio.table.glue2pipe function reference/table.html
+nmrglue.fileio.table.append_column function reference/table.html
 nmrglue.process.pipe_proc.fsh function reference/generated/nmrglue.process.pipe_proc.fsh.html
 nmrglue.process.proc_base.fsh function reference/generated/nmrglue.process.proc_base.fsh.html
 nmrglue.process.proc_bl.sol_boxcar function reference/generated/nmrglue.process.proc_bl.sol_boxcar.html
@@ -160,6 +162,7 @@ nmrglue.fileio.pipe.read_lowmem function reference/pipe.html
 nmrglue.fileio.pipe.guess_udic function reference/pipe.html
 nmrglue.process.proc_base.std_flt function reference/generated/nmrglue.process.proc_base.std_flt.html
 nmrglue.process.proc_base.zf_pad function reference/generated/nmrglue.process.proc_base.zf_pad.html
+nmrglue.fileio.pipe.pipe2glue function reference/pipe.html
 nmrglue.process.proc_base.di function reference/generated/nmrglue.process.proc_base.di.html
 nmrglue.process.proc_base.unappend_imag function reference/generated/nmrglue.process.proc_base.unappend_imag.html
 nmrglue.process.pipe_proc.img function reference/generated/nmrglue.process.pipe_proc.img.html
@@ -168,6 +171,7 @@ nmrglue.fileio.convert.converter.from_bruker method reference/convert.html
 nmrglue.fileio.pipe.write_3D function reference/pipe.html
 nmrglue.fileio.varian.write_fid function reference/varian.html
 nmrglue.process.proc_base.jmod function reference/generated/nmrglue.process.proc_base.jmod.html
+nmrglue.fileio.table.write function reference/table.html
 nmrglue.analysis.leastsqbound.err function reference/leastsqbound.html
 nmrglue.fileio.sparky.create_dic function reference/sparky.html
 nmrglue.fileio.varian.create_dic function reference/varian.html
@@ -175,7 +179,7 @@ nmrglue.fileio.sparky.untile_data2D function reference/sparky.html
 nmrglue.process.proc_base.ri2c function reference/generated/nmrglue.process.proc_base.ri2c.html
 nmrglue.process.proc_base.add_ri function reference/generated/nmrglue.process.proc_base.add_ri.html
 nmrglue.fileio.bruker.ser_2d class reference/bruker.html
-nmrglue.fileio.varian.read_fid_lowmem_3D function reference/varian.html
+nmrglue.analysis.linesh.sim_NDregion function reference/linesh.html
 nmrglue.process.pipe_proc.lpc function reference/generated/nmrglue.process.pipe_proc.lpc.html
 nmrglue.fileio.convert.converter.to_varian method reference/convert.html
 nmrglue.process.proc_lp.make_lp2d_Dd function reference/generated/nmrglue.process.proc_lp.make_lp2d_Dd.html
@@ -188,6 +192,7 @@ nmrglue.process.pipe_proc.tri function reference/generated/nmrglue.process.pipe_
 nmrglue.process.proc_bl.sol_general function reference/generated/nmrglue.process.proc_bl.sol_general.html
 nmrglue.fileio.bruker.guess_shape function reference/bruker.html
 nmrglue.process.proc_base.mc_pow function reference/generated/nmrglue.process.proc_base.mc_pow.html
+nmrglue.fileio.varian.repack_blockheader function reference/varian.html
 nmrglue.fileio.sparky.get_axisheader function reference/sparky.html
 nmrglue.fileio.pipe.append_data function reference/pipe.html
 nmrglue.process.proc_lp.cadzow_single function reference/generated/nmrglue.process.proc_lp.cadzow_single.html
@@ -196,9 +201,12 @@ nmrglue.process.proc_lp.root2damp function reference/generated/nmrglue.process.p
 nmrglue.fileio.bruker.create_data function reference/bruker.html
 nmrglue.process.proc_base.irft function reference/generated/nmrglue.process.proc_base.irft.html
 nmrglue.process.proc_base.gray function reference/generated/nmrglue.process.proc_base.gray.html
+nmrglue.fileio.pipe.glue2pipe function reference/pipe.html
+nmrglue.fileio.table.reorder_columns function reference/table.html
 nmrglue.fileio.pipe.fdata2dic function reference/pipe.html
 nmrglue.fileio.pipe.get_fdata_data function reference/pipe.html
 nmrglue.process.proc_base.nmr_reorder function reference/generated/nmrglue.process.proc_base.nmr_reorder.html
+nmrglue.fileio.pipe.transpose_3D function reference/pipe.html
 nmrglue.fileio.sparky.make_uc function reference/sparky.html
 nmrglue.fileio.varian.get_block function reference/varian.html
 nmrglue.fileio.sparky.sparky_3d class reference/sparky.html
@@ -208,6 +216,7 @@ nmrglue.process.proc_base.neg_middle function reference/generated/nmrglue.proces
 nmrglue.fileio.sparky.read_3D function reference/sparky.html
 nmrglue.fileio.pipe.dic2fdata function reference/pipe.html
 nmrglue.process.proc_base.gram_schmidt function reference/generated/nmrglue.process.proc_base.gram_schmidt.html
+nmrglue.fileio.table.insert_row function reference/table.html
 nmrglue.process.proc_base.ha function reference/generated/nmrglue.process.proc_base.ha.html
 nmrglue.process.proc_base.interleave_complex function reference/generated/nmrglue.process.proc_base.interleave_complex.html
 nmrglue.process.proc_base.ht function reference/generated/nmrglue.process.proc_base.ht.html
@@ -221,13 +230,12 @@ nmrglue.process.proc_base.integ function reference/generated/nmrglue.process.pro
 nmrglue.process.proc_base.set function reference/generated/nmrglue.process.proc_base.set.html
 nmrglue.fileio.varian.create_data function reference/varian.html
 nmrglue.process.proc_base.xy2yx function reference/generated/nmrglue.process.proc_base.xy2yx.html
-nmrglue.process.proc_base.ext_right function reference/generated/nmrglue.process.proc_base.ext_right.html
+nmrglue.fileio.sparky.write_2D function reference/sparky.html
 nmrglue.fileio.pipe.iter3D class reference/pipe.html
 nmrglue.process.proc_base.neg_edges function reference/generated/nmrglue.process.proc_base.neg_edges.html
 nmrglue.process.pipe_proc.em function reference/generated/nmrglue.process.pipe_proc.em.html
 nmrglue.process.pipe_proc.qart function reference/generated/nmrglue.process.pipe_proc.qart.html
 nmrglue.fileio.sparky.get_fileheader function reference/sparky.html
-nmrglue.analysis.linesh.gauss1D class reference/linesh.html
 nmrglue.fileio.varian.read function reference/varian.html
 nmrglue.util.misc.isdicsimilar function reference/misc.html
 nmrglue.process.proc_base.filter_sum function reference/generated/nmrglue.process.proc_base.filter_sum.html
@@ -241,6 +249,7 @@ nmrglue.fileio.sparky.put_axisheader function reference/sparky.html
 nmrglue.fileio.pipe.find_shape function reference/pipe.html
 nmrglue.fileio.varian.dic2hyperheader function reference/varian.html
 nmrglue.process.proc_lp.make_Dd function reference/generated/nmrglue.process.proc_lp.make_Dd.html
+nmrglue.fileio.table.guess_pformat function reference/table.html
 nmrglue.fileio.sparky.read_lowmem_3D function reference/sparky.html
 nmrglue.process.proc_base.zf_size function reference/generated/nmrglue.process.proc_base.zf_size.html
 nmrglue.fileio.bruker.write_binary function reference/bruker.html
@@ -258,14 +267,15 @@ nmrglue.fileio.glue.put_dic function reference/glue.html
 nmrglue.fileio.varian.get_blockheader function reference/varian.html
 nmrglue.fileio.sparky.untile_data3D function reference/sparky.html
 nmrglue.process.proc_base.ls function reference/generated/nmrglue.process.proc_base.ls.html
+nmrglue.fileio.table.pipe2glue function reference/table.html
+nmrglue.fileio.table.delete_row function reference/table.html
 nmrglue.process.pipe_proc.ft function reference/generated/nmrglue.process.pipe_proc.ft.html
 nmrglue.fileio.pipe.create_empty_dic function reference/pipe.html
-nmrglue.fileio.sparky.write_2D function reference/sparky.html
+nmrglue.process.proc_base.ext_right function reference/generated/nmrglue.process.proc_base.ext_right.html
 nmrglue.process.proc_base.range_flt function reference/generated/nmrglue.process.proc_base.range_flt.html
 nmrglue.process.pipe_proc.mult function reference/generated/nmrglue.process.pipe_proc.mult.html
 nmrglue.fileio.varian.write_procpar function reference/varian.html
 nmrglue.fileio.varian.dic2fileheader function reference/varian.html
-nmrglue.process.pipe_proc.sol function reference/generated/nmrglue.process.pipe_proc.sol.html
 nmrglue.fileio.varian.hyperheader2dic function reference/varian.html
 nmrglue.fileio.convert.udata_2d class reference/convert.html
 nmrglue.process.proc_base.neg_left function reference/generated/nmrglue.process.proc_base.neg_left.html
@@ -290,6 +300,7 @@ nmrglue.process.proc_base.rev function reference/generated/nmrglue.process.proc_
 nmrglue.process.proc_lp.find_lproots_hsvd function reference/generated/nmrglue.process.proc_lp.find_lproots_hsvd.html
 nmrglue.fileio.sparky.put_fileheader function reference/sparky.html
 nmrglue.process.proc_lp.make_mirror function reference/generated/nmrglue.process.proc_lp.make_mirror.html
+nmrglue.fileio.table.reorder_rows function reference/table.html
 nmrglue.fileio.pipe.write_1D function reference/pipe.html
 nmrglue.process.proc_base.exchange_lr function reference/generated/nmrglue.process.proc_base.exchange_lr.html
 nmrglue.fileio.glue.glue_2d class reference/glue.html
@@ -298,13 +309,12 @@ nmrglue.analysis.linesh.make_slist function reference/linesh.html
 nmrglue.process.proc_base.gm function reference/generated/nmrglue.process.proc_base.gm.html
 nmrglue.fileio.varian.repack_fileheader function reference/varian.html
 nmrglue.process.proc_base.neg_imag function reference/generated/nmrglue.process.proc_base.neg_imag.html
-nmrglue.fileio.varian.read_fid_lowmem_2D function reference/varian.html
-nmrglue.analysis.linesh.lorentz1D class reference/linesh.html
+nmrglue.fileio.sparky.calc_tshape function reference/sparky.html
 nmrglue.process.proc_bl.sol_sine function reference/generated/nmrglue.process.proc_bl.sol_sine.html
 nmrglue.process.pipe_proc.tm function reference/generated/nmrglue.process.pipe_proc.tm.html
 nmrglue.process.proc_base.neg_real function reference/generated/nmrglue.process.proc_base.neg_real.html
 nmrglue.process.pipe_proc.tp function reference/generated/nmrglue.process.pipe_proc.tp.html
-nmrglue.process.proc_base.zd function reference/generated/nmrglue.process.proc_base.zd.html
+nmrglue.process.pipe_proc.sol function reference/generated/nmrglue.process.pipe_proc.sol.html
 nmrglue.process.proc_base.rotate_lr function reference/generated/nmrglue.process.proc_base.rotate_lr.html
 nmrglue.fileio.varian.make_blockheader function reference/varian.html
 nmrglue.process.proc_lp.root2freq function reference/generated/nmrglue.process.proc_lp.root2freq.html
@@ -317,7 +327,6 @@ nmrglue.process.proc_base.ps function reference/generated/nmrglue.process.proc_b
 nmrglue.process.proc_base.smo function reference/generated/nmrglue.process.proc_base.smo.html
 nmrglue.process.proc_base.amin_flt function reference/generated/nmrglue.process.proc_base.amin_flt.html
 nmrglue.process.proc_base.ext_mid function reference/generated/nmrglue.process.proc_base.ext_mid.html
-nmrglue.fileio.pipe.read_tab function reference/pipe.html
 nmrglue.fileio.convert.converter.to_pipe method reference/convert.html
 nmrglue.process.proc_base.coad function reference/generated/nmrglue.process.proc_base.coad.html
 nmrglue.fileio.bruker.ser_3d class reference/bruker.html
@@ -326,9 +335,10 @@ nmrglue.process.proc_base.thres function reference/generated/nmrglue.process.pro
 nmrglue.fileio.sparky.tile_data3d function reference/sparky.html
 nmrglue.fileio.convert.converter class reference/convert.html
 nmrglue.fileio.pipe.reshape_data function reference/pipe.html
+nmrglue.fileio.table.append_row function reference/table.html
 nmrglue.fileio.sparky.find_tilen_3d function reference/sparky.html
 nmrglue.process.proc_base.sum_flt function reference/generated/nmrglue.process.proc_base.sum_flt.html
-nmrglue.fileio.pipe.transpose_3D function reference/pipe.html
+nmrglue.fileio.table.read function reference/table.html
 nmrglue.fileio.bruker.read_lowmem function reference/bruker.html
 nmrglue.fileio.fileiobase.create_blank_udic function reference/fileiobase.html
 nmrglue.fileio.sparky.dic2datetime function reference/sparky.html
@@ -337,13 +347,15 @@ nmrglue.process.proc_lp.cof2phase function reference/generated/nmrglue.process.p
 nmrglue.process.proc_lp.find_lpc_svd function reference/generated/nmrglue.process.proc_lp.find_lpc_svd.html
 nmrglue.fileio.varian.sign_adj_2Ddata function reference/varian.html
 nmrglue.fileio.bruker.write_jcamp function reference/bruker.html
-nmrglue.fileio.pipe.write_tab function reference/pipe.html
 nmrglue.process.proc_base.avg_flt function reference/generated/nmrglue.process.proc_base.avg_flt.html
 nmrglue.fileio.bruker.uncomplexify_data function reference/bruker.html
+nmrglue.fileio.table.insert_column function reference/table.html
 nmrglue.process.proc_lp.lp_model function reference/generated/nmrglue.process.proc_lp.lp_model.html
 nmrglue.analysis.linesh.s_single_NDregion function reference/linesh.html
 nmrglue.fileio.glue.glue_3d class reference/glue.html
 nmrglue.process.proc_lp.find_roots function reference/generated/nmrglue.process.proc_lp.find_roots.html
+nmrglue.fileio.table.delete_column function reference/table.html
+nmrglue.fileio.pipe.write_table function reference/pipe.html
 nmrglue.fileio.varian.put_block function reference/varian.html
 nmrglue.fileio.sparky.get_tilen function reference/sparky.html
 nmrglue.analysis.linesh.split_list function reference/linesh.html
@@ -355,7 +367,7 @@ nmrglue.fileio.bruker.remove_digital_filter function reference/bruker.html
 nmrglue.fileio.sparky.fileheader2dic function reference/sparky.html
 nmrglue.process.proc_base.set_complex function reference/generated/nmrglue.process.proc_base.set_complex.html
 nmrglue.fileio.varian.fid_3d class reference/varian.html
-nmrglue.process.proc_base.ift function reference/generated/nmrglue.process.proc_base.ift.html
+nmrglue.fileio.varian.write_fid_2D function reference/varian.html
 nmrglue.process.proc_base.filter_amax function reference/generated/nmrglue.process.proc_base.filter_amax.html
 nmrglue.process.pipe_proc.dx function reference/generated/nmrglue.process.pipe_proc.dx.html
 nmrglue.fileio.pipe.unshape_data function reference/pipe.html
@@ -379,7 +391,7 @@ nmrglue.fileio.fileiobase.data_3d class reference/fileiobase.html
 nmrglue.process.proc_base.neg_all function reference/generated/nmrglue.process.proc_base.neg_all.html
 nmrglue.process.proc_bl.poly_td function reference/generated/nmrglue.process.proc_bl.poly_td.html
 nmrglue.process.proc_base.int2bin function reference/generated/nmrglue.process.proc_base.int2bin.html
-nmrglue.fileio.varian.read_fid function reference/varian.html
+nmrglue.fileio.pipe.write_slice_3D function reference/pipe.html
 nmrglue.process.pipe_proc.ebs function reference/generated/nmrglue.process.pipe_proc.ebs.html
 nmrglue.process.proc_base.roll function reference/generated/nmrglue.process.proc_base.roll.html
 nmrglue.fileio.pipe.read_3D function reference/pipe.html
@@ -389,12 +401,14 @@ nmrglue.fileio.pipe.write_2D function reference/pipe.html
 nmrglue.process.proc_base.decode_States function reference/generated/nmrglue.process.proc_base.decode_States.html
 nmrglue.process.proc_lp.lp_cho function reference/generated/nmrglue.process.proc_lp.lp_cho.html
 nmrglue.process.proc_bl.base function reference/generated/nmrglue.process.proc_bl.base.html
+nmrglue.fileio.varian.read_fid function reference/varian.html
 nmrglue.fileio.bruker.complexify_data function reference/bruker.html
-nmrglue.analysis.linesh.sim_NDregion function reference/linesh.html
+nmrglue.fileio.pipe.read_table function reference/pipe.html
 nmrglue.process.proc_base.set_real function reference/generated/nmrglue.process.proc_base.set_real.html
 nmrglue.process.proc_base.filter_median function reference/generated/nmrglue.process.proc_base.filter_median.html
 nmrglue.process.proc_lp.lp_qr function reference/generated/nmrglue.process.proc_lp.lp_qr.html
 nmrglue.process.proc_base.corr function reference/generated/nmrglue.process.proc_base.corr.html
+nmrglue.process.proc_base.zd function reference/generated/nmrglue.process.proc_base.zd.html
 nmrglue.process.proc_base.ft function reference/generated/nmrglue.process.proc_base.ft.html
 nmrglue.fileio.bruker.read_binary_lowmem function reference/bruker.html
 nmrglue.process.pipe_proc.apod function reference/generated/nmrglue.process.pipe_proc.apod.html
@@ -411,7 +425,6 @@ nmrglue.process.proc_base.mir_center function reference/generated/nmrglue.proces
 nmrglue.process.proc_base.append_imag function reference/generated/nmrglue.process.proc_base.append_imag.html
 nmrglue.process.pipe_proc.set function reference/generated/nmrglue.process.pipe_proc.set.html
 nmrglue.fileio.convert.converter.from_universal method reference/convert.html
-nmrglue.fileio.bruker.dig_filter_pts function reference/bruker.html
 nmrglue.process.proc_bl.sol_sine2 function reference/generated/nmrglue.process.proc_bl.sol_sine2.html
 nmrglue.process.pipe_proc.gm function reference/generated/nmrglue.process.pipe_proc.gm.html
 nmrglue.fileio.pipe.read function reference/pipe.html
@@ -434,7 +447,7 @@ nmrglue.process.proc_base.ext function reference/generated/nmrglue.process.proc_
 nmrglue.process.pipe_proc.sine function reference/generated/nmrglue.process.pipe_proc.sine.html
 nmrglue.fileio.pipe.write function reference/pipe.html
 nmrglue.fileio.varian.get_hyperheader function reference/varian.html
-nmrglue.analysis.linesh.scale1D class reference/linesh.html
+nmrglue.fileio.varian.read_fid_lowmem_3D function reference/varian.html
 nmrglue.process.proc_base.filter_rank function reference/generated/nmrglue.process.proc_base.filter_rank.html
 nmrglue.fileio.pipe.pipe_3d class reference/pipe.html
 nmrglue.fileio.sparky.read function reference/sparky.html

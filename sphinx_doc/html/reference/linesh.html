@@ -91,14 +91,14 @@
   <div class="section" id="module-nmrglue.analysis.linesh">
 <h1>nmrglue.linesh<a class="headerlink" href="#module-nmrglue.analysis.linesh" title="Permalink to this headline">¶</a></h1>
 <p>Functions for fitting and simulating arbitrary dimensional lineshapes commonly
-found in nmr experiments</p>
+found in NMR experiments</p>
 <p>This module is imported as nmrglue.linesh and can be called as such</p>
 <div class="section" id="high-level-functions">
 <h2>High-Level Functions<a class="headerlink" href="#high-level-functions" title="Permalink to this headline">¶</a></h2>
 <p>These are the functions the majority of users will use from the linesh module.</p>
 <dl class="function">
 <dt id="nmrglue.analysis.linesh.fit_NDregion">
-<tt class="descclassname">nmrglue.analysis.linesh.</tt><tt class="descname">fit_NDregion</tt><big>(</big><em>region</em>, <em>lineshapes</em>, <em>guesses</em>, <em>amp_guesses</em>, <em>guesses_bounds=None</em>, <em>amp_bounds=None</em>, <em>**kw</em><big>)</big><a class="headerlink" href="#nmrglue.analysis.linesh.fit_NDregion" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">nmrglue.analysis.linesh.</tt><tt class="descname">fit_NDregion</tt><big>(</big><em>region</em>, <em>lineshapes</em>, <em>guesses</em>, <em>amp_guesses</em>, <em>guesses_bounds=None</em>, <em>amp_bounds=None</em>, <em>error_flag=False</em>, <em>**kw</em><big>)</big><a class="headerlink" href="#nmrglue.analysis.linesh.fit_NDregion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fit a N-dimensional region.</p>
 <p>Parameters:</p>
 <ul>
@@ -129,6 +129,12 @@ direction.</p>
 <li><dl class="first docutils">
 <dt>amp_bounds     P-length list of bounds for the amplitude with format </dt>
 <dd><p class="first last">similar to guesses_bound.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>error_flag     Set to True to estimate errors for each lineshape </dt>
+<dd><p class="first last">parameter and amplitude.</p>
 </dd>
 </dl>
 </li>
@@ -169,11 +175,12 @@ describe the lineshape. Currently the following strings are allowed:</p>
 <li>&#8216;g&#8217; or &#8216;gauss&#8217;    Gaussian (normal) lineshape.</li>
 <li>&#8216;l&#8217; or &#8216;lorentz&#8217;  Lorentzian lineshape.</li>
 <li>&#8216;s&#8217; or &#8216;scale&#8217;    Scaled lineshape.</li>
+<li>&#8216;p&#8217; or &#8216;peak&#8217;     Gaussian lineshape which takes FWHM as a parameter.</li>
 </ul>
 <p>The following are all valid lineshapes parameters for a 2D Gaussian peak:</p>
 <p>[&#8216;g&#8217;,&#8217;g&#8217;]
 [&#8216;gauss&#8217;,&#8217;gauss&#8217;]
-[ng.linesh.gauss1D(),ng.linesh.gauss1D()]</p>
+[ng.analysisbase.gauss1D(),ng.analysisbase.gauss1D()]</p>
 <p>An simple example of a lineshape class which simulates the function y=c:</p>
 <dl class="docutils">
 <dt>class constant(): </dt>
@@ -223,7 +230,7 @@ high level functions.  Developers and user who want fine control over lineshape
 fitting may be interested in these functions.</p>
 <dl class="function">
 <dt id="nmrglue.analysis.linesh.f_NDregion">
-<tt class="descclassname">nmrglue.analysis.linesh.</tt><tt class="descname">f_NDregion</tt><big>(</big><em>region</em>, <em>ls_classes</em>, <em>p0</em>, <em>p_bounds</em>, <em>n_peaks</em>, <em>**kw</em><big>)</big><a class="headerlink" href="#nmrglue.analysis.linesh.f_NDregion" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">nmrglue.analysis.linesh.</tt><tt class="descname">f_NDregion</tt><big>(</big><em>region</em>, <em>ls_classes</em>, <em>p0</em>, <em>p_bounds</em>, <em>n_peaks</em>, <em>wmask</em>, <em>**kw</em><big>)</big><a class="headerlink" href="#nmrglue.analysis.linesh.f_NDregion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fit an arbitrary dimensional regions  containing one or more peaks 
 using a contrained Levenberg-Marquard optmization algorithm.</p>
 <p>Parameters:</p>
@@ -292,37 +299,6 @@ repeatly by s_NDregion to build up a full ND region.</p>
 </div>
 <div class="section" id="low-level-classes">
 <h2>Low-Level Classes<a class="headerlink" href="#low-level-classes" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="nmrglue.analysis.linesh.gauss1D">
-<em class="property">class </em><tt class="descclassname">nmrglue.analysis.linesh.</tt><tt class="descname">gauss1D</tt><a class="headerlink" href="#nmrglue.analysis.linesh.gauss1D" title="Permalink to this definition">¶</a></dt>
-<dd><p>One dimensional gaussian (normal) class</p>
-<p>Parameters (mu,sigma):</p>
-<ul class="simple">
-<li>mu    mean (center of mean)</li>
-<li>sigma variance (width if distribution)</li>
-</ul>
-</dd></dl>
-
-<dl class="class">
-<dt id="nmrglue.analysis.linesh.lorentz1D">
-<em class="property">class </em><tt class="descclassname">nmrglue.analysis.linesh.</tt><tt class="descname">lorentz1D</tt><a class="headerlink" href="#nmrglue.analysis.linesh.lorentz1D" title="Permalink to this definition">¶</a></dt>
-<dd><p>One dimensional lorentzian class</p>
-<p>Parameters (x_0,g):</p>
-<ul class="simple">
-<li>x_0     the center of the lorentzian.</li>
-<li>gamma   the scale parameter .</li>
-</ul>
-</dd></dl>
-
-<dl class="class">
-<dt id="nmrglue.analysis.linesh.scale1D">
-<em class="property">class </em><tt class="descclassname">nmrglue.analysis.linesh.</tt><tt class="descname">scale1D</tt><a class="headerlink" href="#nmrglue.analysis.linesh.scale1D" title="Permalink to this definition">¶</a></dt>
-<dd><p>One dimensional scale class</p>
-<p>Simulates a lineshape with functional form:</p>
-<p>1,p_0,p_1,p_2,....</p>
-<p>Where p_0, p_1, ... are the parameters provided.</p>
-</dd></dl>
-
 </div>
 </div>
 
@@ -353,7 +329,7 @@ repeatly by s_NDregion to build up a full ND region.</p>
     </div>
     <div class="footer">
       &copy; Copyright 2010, Jonathan J. Helmus.
-      Last updated on Oct 29, 2010.
+      Last updated on Feb 08, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.4.
     </div>
   </body>

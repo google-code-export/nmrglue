@@ -101,7 +101,8 @@
 <dt id="nmrglue.fileio.pipe.read">
 <tt class="descclassname">nmrglue.fileio.pipe.</tt><tt class="descname">read</tt><big>(</big><em>filename</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.pipe.read" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read a NMRPipe binary file returning a dic,data pair.</p>
-<p>For 3D/4D files filename should be a filemask with a &#8220;%&#8221; formatter.</p>
+<p>For 3D/4D files filename should be a filemask with a &#8220;%&#8221; formatter or
+file is read as a 2D file.</p>
 </dd></dl>
 
 <dl class="function">
@@ -156,17 +157,81 @@ planes are written.</p>
 <dd>Write a 3D NMRPipe file</dd></dl>
 
 <dl class="function">
-<dt id="nmrglue.fileio.pipe.read_tab">
-<tt class="descclassname">nmrglue.fileio.pipe.</tt><tt class="descname">read_tab</tt><big>(</big><em>file</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.pipe.read_tab" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read a NMRPipe .tab file into a records array</p>
-<p>Returns dic,rec where dic is a dictionary of important parameters in the 
-table, rec is a records array of data in the table.</p>
+<dt id="nmrglue.fileio.pipe.read_table">
+<tt class="descclassname">nmrglue.fileio.pipe.</tt><tt class="descname">read_table</tt><big>(</big><em>filename</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.pipe.read_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a NMRPipe database table (.tab) file.</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li>filename  Name of file to read</li>
+</ul>
+<p>Returns: pcomments,pformat,rec</p>
+<ul class="simple">
+<li>pcomments List of NMRPipe comment lines.</li>
+<li>pformats  List of NMRPipe table column formats strings.</li>
+<li>rec       Records array with named fields.</li>
+</ul>
 </dd></dl>
 
 <dl class="function">
-<dt id="nmrglue.fileio.pipe.write_tab">
-<tt class="descclassname">nmrglue.fileio.pipe.</tt><tt class="descname">write_tab</tt><big>(</big><em>filename</em>, <em>dic</em>, <em>rec</em>, <em>overwrite=False</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.pipe.write_tab" title="Permalink to this definition">¶</a></dt>
-<dd>Write NMRPipe .tab file from a records array</dd></dl>
+<dt id="nmrglue.fileio.pipe.write_table">
+<tt class="descclassname">nmrglue.fileio.pipe.</tt><tt class="descname">write_table</tt><big>(</big><em>filename</em>, <em>pcomments</em>, <em>pformats</em>, <em>rec</em>, <em>overwrite=False</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.pipe.write_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a NMRPipe database table (.tab) file.</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li>filename  Name of file to write to.</li>
+<li>pcomments List of NMRPipe comment lines.</li>
+<li>pformats  List of NMRPipe table column formats strings.</li>
+<li>rec       Records array of table.</li>
+<li>overwrite Set True to overwrite file if it exists.</li>
+</ul>
+</dd></dl>
+
+<dl class="function">
+<dt id="nmrglue.fileio.pipe.pipe2glue">
+<tt class="descclassname">nmrglue.fileio.pipe.</tt><tt class="descname">pipe2glue</tt><big>(</big><em>pcomments</em>, <em>pformat</em>, <em>rec</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.pipe.pipe2glue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a NMRPipe table to nmrglue table</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li>pcomments List of NMRPipe comment lines.</li>
+<li>pformats  List of NMRPipe table column formats strings.</li>
+<li>rec       Records array with named fields.</li>
+</ul>
+<p>Returns: comments,rec</p>
+<ul class="simple">
+<li>comments  List of comments</li>
+<li>rec       Records array with named fields.</li>
+</ul>
+</dd></dl>
+
+<dl class="function">
+<dt id="nmrglue.fileio.pipe.glue2pipe">
+<tt class="descclassname">nmrglue.fileio.pipe.</tt><tt class="descname">glue2pipe</tt><big>(</big><em>comments</em>, <em>rec</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.pipe.glue2pipe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a nmrglue table to a NMRPipe table</p>
+<p>The pformats list is a guess from data type and precision in the records
+array.  You may want to edit this to your liking.</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li>comments  List of comments</li>
+<li>rec       Records array with named fields.</li>
+</ul>
+<p>Returns: pcomments,pformat,rec</p>
+<ul class="simple">
+<li>pcomments List of NMRPipe comment lines.</li>
+<li>pformats  List of NMRPipe table column formats strings.</li>
+<li>rec       Records array with named fields.</li>
+</ul>
+</dd></dl>
+
+<dl class="function">
+<dt id="nmrglue.fileio.pipe.guess_pformat">
+<tt class="descclassname">nmrglue.fileio.pipe.</tt><tt class="descname">guess_pformat</tt><big>(</big><em>col</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.pipe.guess_pformat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Guess a NMRPipe table column format string given a column</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li>col   Array from records array</li>
+</ul>
+<p>Returns string for formatting NMRPipe table</p>
+</dd></dl>
 
 <dl class="function">
 <dt id="nmrglue.fileio.pipe.make_uc">
@@ -180,7 +245,7 @@ table, rec is a records array of data in the table.</p>
 
 <dl class="function">
 <dt id="nmrglue.fileio.pipe.create_dic">
-<tt class="descclassname">nmrglue.fileio.pipe.</tt><tt class="descname">create_dic</tt><big>(</big><em>udic</em>, <em>datetimeobj=datetime.datetime(2010</em>, <em>10</em>, <em>29</em>, <em>15</em>, <em>52</em>, <em>21</em>, <em>101613)</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.pipe.create_dic" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">nmrglue.fileio.pipe.</tt><tt class="descname">create_dic</tt><big>(</big><em>udic</em>, <em>datetimeobj=datetime.datetime(2010</em>, <em>12</em>, <em>13</em>, <em>11</em>, <em>21</em>, <em>17</em>, <em>301620)</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.pipe.create_dic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Crate a NMRPipe dictiony from universal dictionary</p>
 <p>Parameters:</p>
 <ul class="simple">
@@ -397,7 +462,7 @@ new axes ordering.</li>
     </div>
     <div class="footer">
       &copy; Copyright 2010, Jonathan J. Helmus.
-      Last updated on Oct 29, 2010.
+      Last updated on Dec 13, 2010.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.4.
     </div>
   </body>
