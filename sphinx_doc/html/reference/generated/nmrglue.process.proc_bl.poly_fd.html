@@ -110,10 +110,10 @@ classifications are used to correct the original vector.</p>
 <li>Fit base line intensities to Normal distribution, gives estimation
 of standard deviation (std) of noise</li>
 <li>Classification threshold set to 1.5*std</li>
+<li>Qualify each block in centered vector as baseline only 
+(its std &lt; thres) or not (std &gt; thres)</li>
+<li>Fit baseline only points to polynomial and substract off</li>
 </ol>
-<p>7. Qualify each block in centered vector as baseline only 
-(its std &lt; thres) or not (std &gt; thres)
-8. Fit baseline only points to polynomial and substract off</p>
 </dd></dl>
 
 </div>
@@ -146,7 +146,7 @@ of standard deviation (std) of noise</li>
     </div>
     <div class="footer">
       &copy; Copyright 2010, Jonathan J. Helmus.
-      Last updated on Oct 29, 2010.
+      Last updated on Apr 04, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.4.
     </div>
   </body>

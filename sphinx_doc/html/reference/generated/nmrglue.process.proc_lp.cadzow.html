@@ -86,16 +86,27 @@
 <tt class="descclassname">nmrglue.process.proc_lp.</tt><tt class="descname">cadzow</tt><big>(</big><em>data</em>, <em>M</em>, <em>K</em>, <em>niter</em>, <em>min_var=False</em><big>)</big><a class="headerlink" href="#nmrglue.process.proc_lp.cadzow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Perform a (row wise) Cadzow-like signal enhancement on 1D or 2D data.</p>
 <p>Parameters:</p>
-<p>data    1D or 2D data matrix.
-M       Large prediction order.  For best results should be between</p>
-<blockquote>
-K+5 and 2*K.</blockquote>
-<p>K       Reduced prediction order.
-niter   Number if iteration of the Cadzow procedure to perform.   
-min_var Set to True to adjust retained singular values using the minimum</p>
-<blockquote>
-variance method, False does not correct the singular values and
-is the Cadzow method.</blockquote>
+<ul>
+<li><p class="first">data      1D or 2D data matrix.</p>
+</li>
+<li><dl class="first docutils">
+<dt>M         Large prediction order.  For best results should be between </dt>
+<dd><p class="first last">K+5 and 2*K.</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">K         Reduced prediction order.</p>
+</li>
+<li><p class="first">niter     Number if iteration of the Cadzow procedure to perform.</p>
+</li>
+<li><dl class="first docutils">
+<dt>min_var   Set to True to adjust retained singular values using the </dt>
+<dd><p class="first last">minimum variance method, False does not correct the singular 
+values andis the Cadzow method.</p>
+</dd>
+</dl>
+</li>
+</ul>
 <p>Returns: array of enhanced data</p>
 <p>Performs a Cadzow-like signal enhancement with optional adjustment
 of singular values using the minimum variance method as desribed in:
@@ -133,7 +144,7 @@ For 2D data performs independant enhancement on each row of data array.</p>
     </div>
     <div class="footer">
       &copy; Copyright 2010, Jonathan J. Helmus.
-      Last updated on Dec 13, 2010.
+      Last updated on Apr 04, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.4.
     </div>
   </body>

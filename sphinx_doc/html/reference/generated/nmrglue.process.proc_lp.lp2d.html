@@ -108,21 +108,36 @@ Therefore the backward prediction matrix cannot be reversed.</p>
 <p>Note that the axes in this function are reversed as compared to the 
 JMR paper.</p>
 <p>Parameters:</p>
-<p>data        2D data (time domain for both axes).
-pred        Number of points to predict along the last axis.
-P           Prediction matrix length along the non-predicted (0) axis.
-M           Prediction matrix length along the predicted (1) axis.
-mirror      &#8216;0&#8217; or &#8216;180&#8217; indicating how the mirror image of the</p>
-<blockquote>
-non-predicted axis should be formed. &#8216;0&#8217; indicated no delay, 
-&#8216;180&#8217; for a half-point delay&#8217;</blockquote>
-<dl class="docutils">
-<dt>fix_points  Set to True to reduce predicted points with magnitude larger</dt>
-<dd>than the largest data point. False leaved predicted points 
-unaltered.</dd>
-<dt>method      Method used to calculate the LP prediction matrix, choose from</dt>
-<dd>&#8216;svd&#8217;,&#8217;qr&#8217;,&#8217;cholesky&#8217;, or &#8216;tls&#8217;</dd>
+<ul>
+<li><p class="first">data       2D data (time domain for both axes).</p>
+</li>
+<li><p class="first">pred       Number of points to predict along the last axis.</p>
+</li>
+<li><p class="first">P          Prediction matrix length along the non-predicted (0) axis.</p>
+</li>
+<li><p class="first">M          Prediction matrix length along the predicted (1) axis.</p>
+</li>
+<li><dl class="first docutils">
+<dt>mirror     &#8216;0&#8217; or &#8216;180&#8217; indicating how the mirror image of the </dt>
+<dd><p class="first last">non-predicted axis should be formed. &#8216;0&#8217; indicated no delay, 
+&#8216;180&#8217; for a half-point delay&#8217;</p>
+</dd>
 </dl>
+</li>
+<li><dl class="first docutils">
+<dt>fix_points Set to True to reduce predicted points with magnitude larger</dt>
+<dd><p class="first last">than the largest data point. False leaved predicted points 
+unaltered.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>method     Method used to calculate the LP prediction matrix, choose from</dt>
+<dd><p class="first last">&#8216;svd&#8217;,&#8217;qr&#8217;,&#8217;cholesky&#8217;, or &#8216;tls&#8217;</p>
+</dd>
+</dl>
+</li>
+</ul>
 </dd></dl>
 
 </div>
@@ -155,7 +170,7 @@ unaltered.</dd>
     </div>
     <div class="footer">
       &copy; Copyright 2010, Jonathan J. Helmus.
-      Last updated on Dec 13, 2010.
+      Last updated on Apr 04, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.4.
     </div>
   </body>

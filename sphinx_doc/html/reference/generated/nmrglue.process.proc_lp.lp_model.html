@@ -86,35 +86,47 @@
 <tt class="descclassname">nmrglue.process.proc_lp.</tt><tt class="descname">lp_model</tt><big>(</big><em>trace</em>, <em>slice=slice(None</em>, <em>None</em>, <em>None)</em>, <em>order=8</em>, <em>mode='f'</em>, <em>mirror=None</em>, <em>method='svd'</em>, <em>full=False</em><big>)</big><a class="headerlink" href="#nmrglue.process.proc_lp.lp_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use Linear Prediction to model a 1D NMR signal.</p>
 <p>Parameter:</p>
-<p>trace   1D trace of data, the FID.
-slice   slice object selecting region of slice to use in LP equation.
-order   Prediction order (Number of LP coefficients)
-mirror  None to process trace as provided, &#8216;0&#8217; or &#8216;180&#8217; forms a mirror</p>
-<blockquote>
-image of the sliced trace to calculate the LP filter.  &#8216;0&#8217; should
+<ul>
+<li><p class="first">trace  1D trace of data, the FID.</p>
+</li>
+<li><p class="first">slice  slice object selecting region of slice to use in LP equation.</p>
+</li>
+<li><p class="first">order  Prediction order (Number of LP coefficients)</p>
+</li>
+<li><dl class="first docutils">
+<dt>mirror None to process trace as provided, &#8216;0&#8217; or &#8216;180&#8217; forms a mirror </dt>
+<dd><p class="first last">image of the sliced trace to calculate the LP filter.  &#8216;0&#8217; should
 be used with data with no delay, &#8216;180&#8217; with data with an initial 
-half-point delay.</blockquote>
-<p>mode    Mode to generate LP filter (f-forward,b-backward,
-method  Method to use to calculate the LP filter, choose from</p>
-<blockquote>
-&#8216;svd&#8217;,&#8217;qr&#8217;,&#8217;choleskey&#8217;,&#8217;hsvd&#8217;.</blockquote>
-<dl class="docutils">
+half-point delay.</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">mode   Mode to generate LP filter (f-forward,b-backward,</p>
+</li>
+<li><dl class="first docutils">
+<dt>method Method to use to calculate the LP filter, choose from</dt>
+<dd><p class="first last">&#8216;svd&#8217;,&#8217;qr&#8217;,&#8217;choleskey&#8217;,&#8217;hsvd&#8217;.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
 <dt>full    Set to True to return amplitudes and phases calculated</dt>
-<dd><dl class="first last docutils">
-<dt>by performing a least squares fitting. False returns only</dt>
-<dd>the damping (relaxation) factors and signal frequencies</dd>
-</dl>
-</dd>
-<dt>Returns:    when full==False:  (damp,freq)</dt>
-<dd><blockquote class="first">
-when full==True:   (damp,freq,amp,phase)</blockquote>
-<p>Where:</p>
-<p class="last">damp    List of damping factors
-freq    List of frequencies
-amp     List of amplitudes
-phase   List of phases</p>
+<dd><p class="first last">by performing a least squares fitting. False returns only
+the damping (relaxation) factors and signal frequencies</p>
 </dd>
 </dl>
+</li>
+</ul>
+<dl class="docutils">
+<dt>Returns: when full==False:  (damp,freq)</dt>
+<dd>when full==True:   (damp,freq,amp,phase)</dd>
+</dl>
+<ul class="simple">
+<li>damp    List of damping factors</li>
+<li>freq    List of frequencies</li>
+<li>amp     List of amplitudes</li>
+<li>phase   List of phases</li>
+</ul>
 <p>Notes:</p>
 <p>When backward LP is used the signal roots are reflected before calculating
 model parameters.</p>
@@ -150,7 +162,7 @@ model parameters.</p>
     </div>
     <div class="footer">
       &copy; Copyright 2010, Jonathan J. Helmus.
-      Last updated on Dec 13, 2010.
+      Last updated on Apr 04, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.4.
     </div>
   </body>

@@ -21,7 +21,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="top" title="nmrglue v1.0 documentation" href="../index.html" />
     <link rel="up" title="Reference Guide" href="index.html" />
-    <link rel="next" title="nmrglue.glue" href="glue.html" />
+    <link rel="next" title="nmrglue.fileiobase" href="fileiobase.html" />
     <link rel="prev" title="nmrglue.bruker" href="bruker.html" /> 
   </head>
   <body>
@@ -35,7 +35,7 @@
           <a href="../modindex.html" title="Global Module Index"
              accesskey="M">modules</a> |</li>
         <li class="right" >
-          <a href="glue.html" title="nmrglue.glue"
+          <a href="fileiobase.html" title="nmrglue.fileiobase"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="bruker.html" title="nmrglue.bruker"
@@ -59,8 +59,8 @@
             <p class="topless"><a href="bruker.html"
                                   title="previous chapter">nmrglue.bruker</a></p>
             <h4>Next topic</h4>
-            <p class="topless"><a href="glue.html"
-                                  title="next chapter">nmrglue.glue</a></p>
+            <p class="topless"><a href="fileiobase.html"
+                                  title="next chapter">nmrglue.fileiobase</a></p>
             <h3>This Page</h3>
             <ul class="this-page-menu">
               <li><a href="../_sources/reference/convert.txt"
@@ -93,7 +93,7 @@
 <p>This modules is imported as nmrglue.convert and can be called as such.</p>
 <div class="section" id="high-level-classes">
 <h2>High-Level Classes<a class="headerlink" href="#high-level-classes" title="Permalink to this headline">¶</a></h2>
-<p>These are classes the majority of users will use from the convert module.</p>
+<p>These are the classes most users will use from the convert module.</p>
 <dl class="class">
 <dt id="nmrglue.fileio.convert.converter">
 <em class="property">class </em><tt class="descclassname">nmrglue.fileio.convert.</tt><tt class="descname">converter</tt><a class="headerlink" href="#nmrglue.fileio.convert.converter" title="Permalink to this definition">¶</a></dt>
@@ -145,12 +145,12 @@
 
 <dl class="method">
 <dt id="nmrglue.fileio.convert.converter.to_pipe">
-<tt class="descname">to_pipe</tt><big>(</big><em>datetimeobj=datetime.datetime(2010</em>, <em>10</em>, <em>29</em>, <em>15</em>, <em>52</em>, <em>21</em>, <em>106927)</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.convert.converter.to_pipe" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">to_pipe</tt><big>(</big><em>datetimeobj=datetime.datetime(2011</em>, <em>4</em>, <em>4</em>, <em>19</em>, <em>18</em>, <em>47</em>, <em>968704)</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.convert.converter.to_pipe" title="Permalink to this definition">¶</a></dt>
 <dd>Return NMRPipe dic,data pair</dd></dl>
 
 <dl class="method">
 <dt id="nmrglue.fileio.convert.converter.to_sparky">
-<tt class="descname">to_sparky</tt><big>(</big><em>datetimeobj=datetime.datetime(2010</em>, <em>10</em>, <em>29</em>, <em>15</em>, <em>52</em>, <em>21</em>, <em>106931)</em>, <em>user='user'</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.convert.converter.to_sparky" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">to_sparky</tt><big>(</big><em>datetimeobj=datetime.datetime(2011</em>, <em>4</em>, <em>4</em>, <em>19</em>, <em>18</em>, <em>47</em>, <em>968708)</em>, <em>user='user'</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.convert.converter.to_sparky" title="Permalink to this definition">¶</a></dt>
 <dd>Return sparky dic,data pair</dd></dl>
 
 <dl class="method">
@@ -172,33 +172,17 @@
 high level functions.  Developers and user who want fine control over file
 conversion will be interested in these functions.</p>
 <dl class="class">
-<dt id="nmrglue.fileio.convert.udata_2d">
-<em class="property">class </em><tt class="descclassname">nmrglue.fileio.convert.</tt><tt class="descname">udata_2d</tt><big>(</big><em>data</em>, <em>(iproc</em>, <em>oproc</em>, <em>odtype)</em>, <em>order=</em><span class="optional">[</span>, <em>'y'</em>, <em>'x'</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#nmrglue.fileio.convert.udata_2d" title="Permalink to this definition">¶</a></dt>
-<dd><p>udata_2d emulates a numpy.ndarray object without loading data into memory</p>
+<dt id="nmrglue.fileio.convert.udata_nd">
+<em class="property">class </em><tt class="descclassname">nmrglue.fileio.convert.</tt><tt class="descname">udata_nd</tt><big>(</big><em>edata</em>, <em>iproc</em>, <em>oproc</em>, <em>odtype</em>, <em>order=None</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.convert.udata_nd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrap other fileiobase.data_nd derived objects with input/output conversion
+when slices are requested.</p>
 <ul class="simple">
-<li>slicing operations return ndarray objects</li>
-<li>can be used in iteration with expected results</li>
-<li>transpose and swapaxes functions create a new udata_2d object with
-new axes ordering.</li>
-<li>has ndim,shape and dtype attributes</li>
+<li>slicing operations return ndarray objects.</li>
+<li>can iterate over with expected results.</li>
+<li>transpose and swapaxes methods create a new objects with correct axes
+ordering.</li>
+<li>has ndim, shape, and dtype attributes.</li>
 </ul>
-<p>This object processes other data_2d derived objects as they are read
-from disk.</p>
-</dd></dl>
-
-<dl class="class">
-<dt id="nmrglue.fileio.convert.udata_3d">
-<em class="property">class </em><tt class="descclassname">nmrglue.fileio.convert.</tt><tt class="descname">udata_3d</tt><big>(</big><em>data</em>, <em>(iproc</em>, <em>oproc</em>, <em>odtype)</em>, <em>order=</em><span class="optional">[</span>, <em>'z'</em>, <em>'y'</em>, <em>'x'</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#nmrglue.fileio.convert.udata_3d" title="Permalink to this definition">¶</a></dt>
-<dd><p>udata_3d emulates a numpy.ndarray object without loading data into memory</p>
-<ul class="simple">
-<li>slicing operations return ndarray objects</li>
-<li>can be used in iteration with expected results</li>
-<li>transpose and swapaxes functions create a new udata_3d object with
-new axes ordering.</li>
-<li>has ndim,shape and dtype attributes</li>
-</ul>
-<p>This object processes other data_3d derived objects as they are read
-from disk.</p>
 </dd></dl>
 
 </div>
@@ -220,7 +204,7 @@ from disk.</p>
           <a href="../modindex.html" title="Global Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="glue.html" title="nmrglue.glue"
+          <a href="fileiobase.html" title="nmrglue.fileiobase"
              >next</a> |</li>
         <li class="right" >
           <a href="bruker.html" title="nmrglue.bruker"
@@ -231,7 +215,7 @@ from disk.</p>
     </div>
     <div class="footer">
       &copy; Copyright 2010, Jonathan J. Helmus.
-      Last updated on Oct 29, 2010.
+      Last updated on Apr 04, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.4.
     </div>
   </body>

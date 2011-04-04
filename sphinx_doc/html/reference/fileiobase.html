@@ -22,7 +22,7 @@
     <link rel="top" title="nmrglue v1.0 documentation" href="../index.html" />
     <link rel="up" title="Reference Guide" href="index.html" />
     <link rel="next" title="nmrglue.pipe" href="pipe.html" />
-    <link rel="prev" title="nmrglue.glue" href="glue.html" /> 
+    <link rel="prev" title="nmrglue.convert" href="convert.html" /> 
   </head>
   <body>
     <div class="related">
@@ -38,7 +38,7 @@
           <a href="pipe.html" title="nmrglue.pipe"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="glue.html" title="nmrglue.glue"
+          <a href="convert.html" title="nmrglue.convert"
              accesskey="P">previous</a> |</li>
         <li><a href="../index.html">nmrglue v1.0 documentation</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">Reference Guide</a> &raquo;</li> 
@@ -56,8 +56,8 @@
 </ul>
 
             <h4>Previous topic</h4>
-            <p class="topless"><a href="glue.html"
-                                  title="previous chapter">nmrglue.glue</a></p>
+            <p class="topless"><a href="convert.html"
+                                  title="previous chapter">nmrglue.convert</a></p>
             <h4>Next topic</h4>
             <p class="topless"><a href="pipe.html"
                                   title="next chapter">nmrglue.pipe</a></p>
@@ -109,6 +109,61 @@ high level functions.</p>
 creates necessary directiories as needed.</p>
 </dd></dl>
 
+<dl class="function">
+<dt id="nmrglue.fileio.fileiobase.ndfrom_iter">
+<tt class="descclassname">nmrglue.fileio.fileiobase.</tt><tt class="descname">ndfrom_iter</tt><big>(</big><em>shape</em>, <em>slices</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.fileiobase.ndfrom_iter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nmrglue.fileio.fileiobase.ndto_iter">
+<tt class="descclassname">nmrglue.fileio.fileiobase.</tt><tt class="descname">ndto_iter</tt><big>(</big><em>shape</em>, <em>slices</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.fileiobase.ndto_iter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nmrglue.fileio.fileiobase.ndtofrom_iter">
+<tt class="descclassname">nmrglue.fileio.fileiobase.</tt><tt class="descname">ndtofrom_iter</tt><big>(</big><em>shape</em>, <em>slices</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.fileiobase.ndtofrom_iter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nmrglue.fileio.fileiobase.size_and_ndtofrom_iter">
+<tt class="descclassname">nmrglue.fileio.fileiobase.</tt><tt class="descname">size_and_ndtofrom_iter</tt><big>(</big><em>shape</em>, <em>slices</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.fileiobase.size_and_ndtofrom_iter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nmrglue.fileio.fileiobase.index2trace_flat">
+<tt class="descclassname">nmrglue.fileio.fileiobase.</tt><tt class="descname">index2trace_flat</tt><big>(</big><em>shape</em>, <em>index</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.fileiobase.index2trace_flat" title="Permalink to this definition">¶</a></dt>
+<dd>Calculate trace number from shape and index of all indirect dimensions
+assuming a flat structure</dd></dl>
+
+<dl class="function">
+<dt id="nmrglue.fileio.fileiobase.trace2index_flat">
+<tt class="descclassname">nmrglue.fileio.fileiobase.</tt><tt class="descname">trace2index_flat</tt><big>(</big><em>shape</em>, <em>ntrace</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.fileiobase.trace2index_flat" title="Permalink to this definition">¶</a></dt>
+<dd>Calculate the index of a trace assuming a flat structure</dd></dl>
+
+<dl class="function">
+<dt id="nmrglue.fileio.fileiobase.index2trace_opp">
+<tt class="descclassname">nmrglue.fileio.fileiobase.</tt><tt class="descname">index2trace_opp</tt><big>(</big><em>shape</em>, <em>index</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.fileiobase.index2trace_opp" title="Permalink to this definition">¶</a></dt>
+<dd>Calculate trace number from shape and index of all indirect dimensions
+assuming a phase ordering opposite the time increments.</dd></dl>
+
+<dl class="function">
+<dt id="nmrglue.fileio.fileiobase.trace2index_opp">
+<tt class="descclassname">nmrglue.fileio.fileiobase.</tt><tt class="descname">trace2index_opp</tt><big>(</big><em>shape</em>, <em>ntrace</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.fileiobase.trace2index_opp" title="Permalink to this definition">¶</a></dt>
+<dd>Calculate the index of a trace assuming opposite phase/time increment 
+ordering</dd></dl>
+
+<dl class="function">
+<dt id="nmrglue.fileio.fileiobase.index2trace_reg">
+<tt class="descclassname">nmrglue.fileio.fileiobase.</tt><tt class="descname">index2trace_reg</tt><big>(</big><em>shape</em>, <em>index</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.fileiobase.index2trace_reg" title="Permalink to this definition">¶</a></dt>
+<dd>Calculate trace number from shape and index of all indirect dimensions
+assuming the same  phase and time ordering.</dd></dl>
+
+<dl class="function">
+<dt id="nmrglue.fileio.fileiobase.trace2index_reg">
+<tt class="descclassname">nmrglue.fileio.fileiobase.</tt><tt class="descname">trace2index_reg</tt><big>(</big><em>shape</em>, <em>ntrace</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.fileiobase.trace2index_reg" title="Permalink to this definition">¶</a></dt>
+<dd>Calculate the index of a trace assuming the same phase/time increment 
+ordering</dd></dl>
+
 </div>
 <div class="section" id="low-level-classes">
 <h2>Low-Level Classes<a class="headerlink" href="#low-level-classes" title="Permalink to this headline">¶</a></h2>
@@ -120,26 +175,13 @@ called by high level classes or functions.</p>
 <dd>object provides methods to convert between common nmr units</dd></dl>
 
 <dl class="class">
-<dt id="nmrglue.fileio.fileiobase.data_2d">
-<em class="property">class </em><tt class="descclassname">nmrglue.fileio.fileiobase.</tt><tt class="descname">data_2d</tt><big>(</big><em>order</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.fileiobase.data_2d" title="Permalink to this definition">¶</a></dt>
-<dd><p>data_2d emulates numpy.ndarray object without loading data into memory</p>
+<dt id="nmrglue.fileio.fileiobase.data_nd">
+<em class="property">class </em><tt class="descclassname">nmrglue.fileio.fileiobase.</tt><tt class="descname">data_nd</tt><big>(</big><em>order</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.fileiobase.data_nd" title="Permalink to this definition">¶</a></dt>
+<dd><p>data_nd emulates numpy.ndarray object without loading data into memory</p>
 <ul class="simple">
 <li>slicing operations return ndarray objects</li>
 <li>can iterate over with expected results</li>
-<li>transpose and swapaxes functions create a new data_2d object with the
-new axes ordering</li>
-<li>has ndim, shape, and dtype attributes.</li>
-</ul>
-</dd></dl>
-
-<dl class="class">
-<dt id="nmrglue.fileio.fileiobase.data_3d">
-<em class="property">class </em><tt class="descclassname">nmrglue.fileio.fileiobase.</tt><tt class="descname">data_3d</tt><big>(</big><em>order</em><big>)</big><a class="headerlink" href="#nmrglue.fileio.fileiobase.data_3d" title="Permalink to this definition">¶</a></dt>
-<dd><p>data_3d emulates numpy.ndarray object without loading data into memory</p>
-<ul class="simple">
-<li>slicing operations return ndarray objects</li>
-<li>can iterate over with expected results</li>
-<li>transpose and swapaxes functions create a new fid_3d object with the
+<li>transpose and swapaxes functions create a new data_nd object with the
 new axes ordering</li>
 <li>has ndim, shape, and dtype attributes.</li>
 </ul>
@@ -167,7 +209,7 @@ new axes ordering</li>
           <a href="pipe.html" title="nmrglue.pipe"
              >next</a> |</li>
         <li class="right" >
-          <a href="glue.html" title="nmrglue.glue"
+          <a href="convert.html" title="nmrglue.convert"
              >previous</a> |</li>
         <li><a href="../index.html">nmrglue v1.0 documentation</a> &raquo;</li>
           <li><a href="index.html" >Reference Guide</a> &raquo;</li> 
@@ -175,7 +217,7 @@ new axes ordering</li>
     </div>
     <div class="footer">
       &copy; Copyright 2010, Jonathan J. Helmus.
-      Last updated on Oct 29, 2010.
+      Last updated on Apr 04, 2011.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.4.
     </div>
   </body>
