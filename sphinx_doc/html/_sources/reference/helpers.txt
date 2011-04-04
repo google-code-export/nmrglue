@@ -1,5 +1,5 @@
-nmrglue.sparky
-==============
+nmrglue.helpers
+===============
 
 .. automodule:: nmrglue.analysis.helpers
 
@@ -9,7 +9,7 @@ High-Level Functions
 ---------------------
 
 
-These are the functions most users will use from the sparky module.
+These are the functions most users will use from the helpers module.
 
 .. autofunction:: delta
 .. autofunction:: limit

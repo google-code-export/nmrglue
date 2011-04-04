@@ -1,5 +1,5 @@
-nmrglue.sparky
-==============
+nmrglue.peakpick
+================
 
 .. automodule:: nmrglue.analysis.peakpick
 

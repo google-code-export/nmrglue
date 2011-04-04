@@ -1,5 +1,5 @@
-nmrglue.sparky
-==============
+nmrglue.analysisbase
+====================
 
 .. automodule:: nmrglue.analysis.analysisbase
 

@@ -1,5 +1,5 @@
-nmrglue.sparky
-==============
+nmrglue.segmentation
+====================
 
 .. automodule:: nmrglue.analysis.segmentation
 
