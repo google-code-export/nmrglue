@@ -28,4 +28,4 @@ If you are interested in contributing to nmrglue please the preferred method is:
 
 3. Create a [http://help.github.com/send-pull-requests/ pull request] on your repository.  
 
-Patches and comments are also accepted through the [http://github.com/jjhelmus/nmrglue/issue Issue tracker] or by mailing the [http://groups.google.com/group/nmrglue-discuss nmrglue mailing list] or Jonathan Helmus directly.
+Patches and comments are also accepted through the [http://github.com/jjhelmus/nmrglue/issues Issue tracker] or by mailing the [http://groups.google.com/group/nmrglue-discuss nmrglue mailing list] or Jonathan Helmus directly.
