@@ -8,12 +8,12 @@ nmrglue's source code is hosted on Github.
 
 To view nmrglue's source code visit the project's github page:
 
-http://github.com/jhelmus/nmrglue
+http://github.com/jjhelmus/nmrglue
 
 To check out a copy of the source code for yourself:
 
 {{{
-git clone git://github.com/jhelmus/nmrglue.git
+git clone git://github.com/jjhelmus/nmrglue.git
 }}}
 
 To learn more about Git and github, see http://github.com
@@ -22,7 +22,7 @@ To learn more about Git and github, see http://github.com
 
 If you are interested in contributing to nmrglue please the preferred method is:
 
-1. Go to http://github.com/jhelmus/nmrglue and fork the project.
+1. Go to http://github.com/jjhelmus/nmrglue and fork the project.
 
 2. Make changes to your fork of the project.
 
