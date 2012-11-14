@@ -1,5 +1,13 @@
 """
 Constrained multivariate Levenberg-Marquardt optimization
+
+An updated version of this file can be found at
+https://github.com/jjhelmus/leastsqbound-scipy
+
+The version here has known bugs which have been
+fixed above, proceed at your own risk.
+
+- Jonathan J. Helmus (jjhelmus@gmail.com)
 """
 
 from scipy.optimize import leastsq
