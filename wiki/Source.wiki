@@ -20,7 +20,7 @@ To learn more about Git and github, see http://github.com
 
 = Contributing to nmrglue =
 
-If you are interested in contributing to nmrglue please the preferred method is:
+If you are interested in contributing to nmrglue the preferred method is:
 
 1. Go to http://github.com/jjhelmus/nmrglue and fork the project.
 
